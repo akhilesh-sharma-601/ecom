@@ -14,9 +14,11 @@ body{
 li{
   text-transform: capitalize;
 }
-.nav-item:hover{
-  color: #e2c522;
-}
+li:hover{
+border: 1px solid rgb(175, 175, 172);
+border-radius: 10px;
+background-color: #ce9c06;}
+
 .burger{
   color: white;
   font-size: 18px;
@@ -50,6 +52,7 @@ li{
 .myimg{
   width: 100%;
   padding: 2rem;
+  height: 70%
 }
 .item{
   margin: 1rem 2rem;
@@ -61,22 +64,21 @@ li{
 box-shadow: 0 8px 6px 5px rgb(153, 153, 153);
 transition: ease 0.3s;
 }
-@media only screen and (max-width: 900px) {
+
+
+
+@media only screen and (max-width: 756px) {
 .mrow{
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   }
-  .mrow p{
-    margin: 5px 0;
-    padding:  5px 0;
-  }
-  .row img{
-    margin-bottom: 5px;
-  }
-  .mcol{
-    margin: 5px 0;
-  }
+
 }
+  
+  
+
+
+
 

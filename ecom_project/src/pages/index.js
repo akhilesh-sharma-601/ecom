@@ -17,6 +17,7 @@ const IndexPage = ({ data }) => (
       subtitle="All You , Need Is Here "
       heroclass="hero-background"
     />
+   
     <Product myproducts={data.myproducts} />
     <Infoblock heading="About Us" />
     <DualInfo heading="core values" />

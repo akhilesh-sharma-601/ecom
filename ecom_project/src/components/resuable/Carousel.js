@@ -1,8 +1,11 @@
 import React from 'react'
-
+import img1 from '../../images/contentFul/xmas.jpg'
+import img2 from '../../images/contentFul/s10.jpg'
+import img3 from '../../images/contentFul/sale.jpg'
 export default function Carousel() {
     return (
-        <section>
+        <section className="newarival">
+         
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
   <ol className="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
@@ -11,13 +14,13 @@ export default function Carousel() {
   </ol>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img className="d-block w-100" src="..." alt="First slide"/>
+      <img className="d-block w-100" src={img1} alt="First slide"/>
     </div>
     <div className="carousel-item">
-      <img className="d-block w-100" src="..." alt="Second slide"/>
+      <img className="d-block w-100" src={img2} alt="Second slide"/>
     </div>
     <div className="carousel-item">
-      <img className="d-block w-100" src="..." alt="Third slide"/>
+      <img className="d-block w-100" src={img3} alt="Third slide"/>
     </div>
   </div>
   <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -29,6 +32,7 @@ export default function Carousel() {
     <span className="sr-only">Next</span>
   </a>
 </div>
+
 </section>
     )
 }
