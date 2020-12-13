@@ -33,8 +33,8 @@ toggleFunction=()=>{
           <img src={logo} alt="logo" width="40px" />
           <h1 className="navbar-brand text-white ml-2">Ecom Express</h1>
         </Link>
-        <button className="navbar-toggler" onClick={this.toggleFunction}>
-          <span className="text-white"> <i className="fas fa-bars"></i></span>
+        <button className="navbar-toggler text-white burger" onClick={this.toggleFunction}>
+          <span className="text-white"> <i className="fas fa-bars text-white burger"></i></span>
         </button>
         <div className={this.state.navClass}>
           <ul className="navbar-nav ml-auto mr-5">

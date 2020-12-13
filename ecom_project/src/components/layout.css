@@ -15,7 +15,12 @@ li{
   text-transform: capitalize;
 }
 .nav-item:hover{
-  color: #17d1ac;
+  color: #e2c522;
+}
+.burger{
+  color: white;
+  font-size: 18px;
+  
 }
 .cart-icon{
   font-size: 1.2rem;
