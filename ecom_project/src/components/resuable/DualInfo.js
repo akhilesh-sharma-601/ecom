@@ -30,7 +30,7 @@ export default function DualInfo({ heading }) {
               </p>
            
           </div>
-          <div className="col-6 sm-10 mcol d-flex">
+          <div className="col-6 sm-10 mcol mb-2 d-flex">
             <div className="card bg-dark">
               <img
                 className="card-img-top mypic bg-dark mx-auto"
