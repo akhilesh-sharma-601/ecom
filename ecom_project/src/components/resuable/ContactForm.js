@@ -4,7 +4,7 @@ export default function ContactForm() {
   return (
     <section classNameName="py-3">
       <div className="col-10 col-sm-8 mx-auto">
-        <form action="https://formspree.io/f/{akhileshsharma601@yahoo.com}" method="POST">
+        <form action="https://formspree.io/f/xqkgywpw" method="POST">
           <div className="form-group">
             <input
               type="text"
@@ -21,7 +21,7 @@ export default function ContactForm() {
               className="form-control mb-2"
             />
             <input
-              type="Mobile"
+              type="number"
               name="Mobile"
               id="mobile"
               placeholder="Your Mobile Number Here"
