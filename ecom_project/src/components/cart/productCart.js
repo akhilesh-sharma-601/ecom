@@ -2,12 +2,42 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import Heading from "../resuable/Heading"
 
+const getCategory = items => {
+  let holdItems = items.map(items => {
+    return items.node.category
+  })
+  let holdCatogaries = new Set(holdItems)
+  let categories = Array.from(holdCatogaries)
+  categories = ["all", ...categories]
+  return categories
+}
+
 export default class productCart extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      products: props.myproducts.edges,
       myproducts: props.myproducts.edges,
+      mycategories: getCategory(props.myproducts.edges),
     }
+  }
+  catyClicked = category => {
+    
+    let keepit =[...this.state.myproducts]
+    
+    if (category === "all"){
+      this.setState(()=>{
+        return {myproducts : keepit}
+      })
+    }
+    else{
+        let holdme=keepit.filter(({node})=>node.category===
+        category)
+     this.setState(()=>{
+       return {myproducts:holdme}
+     })
+      }
+    
   }
 
   render() {
@@ -16,6 +46,24 @@ export default class productCart extends Component {
       <section className="py-5">
         <div className="container">
           <Heading title="All Products" />
+          <div className="row my-3">
+            <div className="col-10 mx-auto text-center">
+              {this.state.mycategories.map((category, index) => {
+                return (
+                  <button
+                    type="button"
+                    className="btn btn-info m-3 px-3"
+                    key={index}
+                    onClick={() => {
+                      this.catyClicked()
+                    }}
+                  >
+                    {category}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
           <div className="row">
             {this.state.myproducts.map(({ node }) => {
               return (
