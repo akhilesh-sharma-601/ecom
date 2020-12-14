@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import Heading from "../resuable/Heading"
 
-const getCategory = items => {
+const getcategory = items => {
   let holdItems = items.map(items => {
     return items.node.category
   })
@@ -18,11 +18,10 @@ export default class productCart extends Component {
     this.state = {
       products: props.myproducts.edges,
       myproducts: props.myproducts.edges,
-      mycategories: getCategory(props.myproducts.edges),
+      mycategories: getcategory(props.myproducts.edges),
     }
   }
   catyClicked = category => {
-    
     let keepit =[...this.state.myproducts]
     
     if (category === "all"){
