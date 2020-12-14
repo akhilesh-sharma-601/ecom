@@ -2,7 +2,7 @@ import React from "react"
 
 export default function ContactForm() {
   return (
-    <section classNameName="py-3">
+    <section className="py-3">
       <div className="col-10 col-sm-8 mx-auto">
         <form action="https://formspree.io/f/xqkgywpw" method="POST">
           <div className="form-group">
