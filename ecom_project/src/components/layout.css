@@ -5,6 +5,9 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
+.display-3{
+  font-size: 3.5rem;
+}
 .bg-theme{
 background-color: #057537;
 }
