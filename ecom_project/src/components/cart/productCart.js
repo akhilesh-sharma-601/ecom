@@ -17,23 +17,23 @@ export default class productCart extends Component {
     super(props)
     this.state = {
       products: props.myproducts.edges,
-      myproducts: props.myproducts.edges,
+      myAllproducts: props.myproducts.edges,
       mycategories: getcategory(props.myproducts.edges),
     }
   }
   catyClicked = category => {
-    let keepit =[...this.state.myproducts]
+    let keepit =[...this.state.myAllproducts]
     
     if (category === "all"){
       this.setState(()=>{
-        return {myproducts : keepit}
+        return {myAllproducts : keepit}
       })
     }
     else{
         let holdme=keepit.filter(({node})=>node.category===
         category)
      this.setState(()=>{
-       return {myproducts:holdme}
+       return {myAllproducts:holdme}
      })
       }
     
@@ -64,7 +64,7 @@ export default class productCart extends Component {
             </div>
           </div>
           <div className="row">
-            {this.state.myproducts.map(({ node }) => {
+            {this.state.myAllproducts.map(({ node }) => {
               return (
                 <div
                   key={node.id}
